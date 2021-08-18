@@ -1,4 +1,4 @@
-name: pipeline
+name: storing-artifacts
 on: push
 jobs:
   my-job:
@@ -8,6 +8,11 @@ jobs:
       - name: my-step
         uses: actions/checkout@v2      
       - name: my-step2
-        run: ci/build-app.sh
+        run: ci/build-app.sh      
       - name: Test
         run: ci/unit-test-app.sh
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: my-artifact
+          path: path/to/artifact/
