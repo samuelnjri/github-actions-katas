@@ -1,4 +1,4 @@
-name: storing-artifacts
+name: pipelinetest
 on: push
 jobs:
   my-job:
