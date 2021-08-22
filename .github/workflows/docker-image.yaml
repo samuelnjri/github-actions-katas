@@ -1,4 +1,4 @@
-name: Java CI
+name: Java CI 06
 on: push
 env:
   docker_username: ${{ secrets.DOCKER_HUB_USERNAME }}
